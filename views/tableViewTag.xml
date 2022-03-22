@@ -1,0 +1,14 @@
+<odoo>
+  <data>
+    <record id="estate_tag_view_tree" model="ir.ui.view">
+      <field name="name">Tag View</field>
+      <field name="model">estate.tag</field>
+      <field name="arch" type="xml">
+        <tree string="Tag" editable="top">
+          <field name="sequence" widget="handle"/>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+  </data>
+</odoo>

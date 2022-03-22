@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+0,manager_permissions_properties,model_estate_estate,estate.estate_group_manager,1,1,1,0
+1,manager_permissions_type,model_estate_type,estate.estate_group_manager,1,1,1,1
+2,manager_permissions_tag,model_estate_tag,estate.estate_group_manager,1,1,1,1
+3,manager_permissions_offer,model_estate_offer,estate.estate_group_manager,1,1,1,1
+4,agent_permissions_type,model_estate_type,estate.estate_group_user,1,0,0,0
+5,agent_permissions_tag,model_estate_tag,estate.estate_group_user,1,0,0,0
+6,agent_permissions_properties,model_estate_estate,estate.estate_group_user,1,1,1,0
+7,agent_permissions_offer,model_estate_offer,estate.estate_group_user,1,1,1,0

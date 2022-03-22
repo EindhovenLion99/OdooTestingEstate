@@ -1,0 +1,12 @@
+<odoo>
+<data>
+<menuitem id="test_menu_root" name="Test">
+    <menuitem id="test_first_level_menu" name="Vistas">
+        <menuitem id="test_model_menu_action_offer" action="offerView"/>
+        <menuitem id="test_model_menu_action_types" action="typeView"/>
+        <menuitem id="test_model_menu_action_tag" action="tagView"/>
+        <menuitem id="test_model_menu_action_estate" action="estateView"/>
+    </menuitem>
+</menuitem>
+</data>
+</odoo>

@@ -1,0 +1,9 @@
+<odoo>
+  <data>
+    <record id="typeView" model="ir.actions.act_window">
+        <field name="name">Type View</field>
+        <field name="res_model">estate.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+  </data>
+</odoo>

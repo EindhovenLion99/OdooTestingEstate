@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="rule_id" model="ir.rule">
+            <field name="name">Agents read and write rules</field>
+            <field name="model_id" ref="model_estate_estate"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="groups" eval="[(4, ref('estate_group_user'))]"/>
+            <field name="domain_force">[
+                '|', ('salesman_id', '=', user.id),
+                    ('salesman_id', '=', False)
+            ]</field>
+        </record>
+    </data>
+</odoo>

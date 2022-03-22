@@ -1,0 +1,15 @@
+<odoo>
+  <data>
+    <record id="offerView" model="ir.actions.act_window">
+        <field name="name">Offer View</field>
+        <field name="res_model">estate.offer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="action_offers" model="ir.actions.act_window">
+        <field name="name">Offer View</field>
+        <field name="res_model">estate.offer</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('property_type_id', '=', active_id)]</field>
+    </record>
+  </data>
+</odoo>

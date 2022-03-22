@@ -1,0 +1,9 @@
+<odoo>
+  <data>
+    <record id="userView" model="ir.actions.act_window">
+        <field name="name">User View</field>
+        <field name="res_model">res.users</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+  </data>
+</odoo>

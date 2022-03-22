@@ -1,0 +1,26 @@
+<odoo>
+  <data>
+    <record id="estate_view_tree" model="ir.ui.view">
+      <field name="name">Estate View</field>
+      <field name="model">estate.estate</field>
+      <field name="arch" type="xml">
+        <tree string="Estate" decoration-muted="state == 'sold'" decoration-success="state == 'offer received' or state == 'offer accepted'" decoration-bf="state == 'offer accepted'">
+          <field name="name"/>
+          <field name="description"/>
+          <field name="postcode"/>
+          <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+          <field name="date_availability" optional="hide"/>
+          <field name="expected_price"/>
+          <field name="selling_price"/>
+          <field name="bedrooms"/>
+          <field name="living_area"/>
+          <field name="facades"/>
+          <field name="total_area"/>
+          <field name="offers_id" invisible="1"/>
+          <field name="acceptedOffer" invisible="1"/>
+          <field name="state" invisible="1"/>
+        </tree>
+      </field>
+    </record>
+  </data>
+</odoo>

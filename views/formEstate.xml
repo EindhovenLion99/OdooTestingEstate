@@ -1,0 +1,56 @@
+<odoo>
+  <data>
+    <record id="estate_form_view" model="ir.ui.view">
+      <field name="name">Estate View Form</field>
+      <field name="model">estate.estate</field>
+      <field name="arch" type="xml">
+        <form string="Estate">
+          <header>
+            <button name="action_sell_status" type="object" string="Sold" states="new,offer received,offer accepted"/>
+            <button name="action_cancel_status" type="object" string="Cancel" states="new,offer received,offer accepted"/>
+            <field name="state" widget="statusbar" statusbar_visible="new,offer received,offer accepted,sold,cancelled"/>
+          </header>
+          <sheet>
+            <h1><field name="name"/></h1>
+            <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+            <group col="4">
+                <field name="estate_type_id" can_write="False" can_create="False" options="{'no_create': True, 'no_open': True}"/>
+                <field name="postcode"/>
+                <field name="expected_price"/>
+                <field name="date_availability"/>
+                <field name="selling_price"/>
+            </group>
+            <notebook>
+              <page string="Description">
+                <group col="2">
+                  <field name="description"/>
+                  <field name="bedrooms"/>
+                  <field name="living_area"/>
+                  <field name="facades"/>
+                  <field name="garage"/>
+                  <field name="garden"/>
+                  <field name="garden_area" attrs="{'invisible': [('garden', '=', False)]}"/>
+                  <field name="garden_orientation" attrs="{'invisible': [('garden', '=', False)]}"/>
+                  <field name="total_area"/>
+                  <field name="best_offer"/>
+                </group>
+              </page>
+              <page string="Offers">
+                <group col="2">
+                  <field name="offers_id" attrs="{'readonly': ['|', ('state', '=', 'sold'), ('state', '=', 'cancelled')]}"/>
+                </group>
+              </page>
+              <page string="Other info">
+                <group col="2">
+                  <field name="buyer_id"/>
+                  <field name="salesman_id"/>
+                  <field name="company_id"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>
