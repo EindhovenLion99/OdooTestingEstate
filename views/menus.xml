@@ -1,6 +1,6 @@
 <odoo>
 <data>
-<menuitem id="test_menu_root" name="Test">
+<menuitem id="test_menu_root" name="Estate">
     <menuitem id="test_first_level_menu" name="Vistas">
         <menuitem id="test_model_menu_action_offer" action="offerView"/>
         <menuitem id="test_model_menu_action_types" action="typeView"/>

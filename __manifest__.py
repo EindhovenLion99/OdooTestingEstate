@@ -30,8 +30,8 @@
         'security/ir.model.access.csv',
         #'views/views.xml',
         #'views/templates.xml',
+        
         'views/tableViewEstate.xml',
-        'views/menus.xml',
         'views/viewsEstate.xml',
         'views/viewsOffer.xml',
         'views/viewsTypes.xml',
@@ -45,7 +45,8 @@
         'views/searchEstate.xml',
         'views/formUser.xml',
         'views/viewsUsers.xml',
-        'views/kanbanEstate.xml'
+        'views/kanbanEstate.xml',
+        'views/menus.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
