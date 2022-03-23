@@ -1,0 +1,32 @@
+<odoo>
+  <data>
+    <template id="assets_frontend_snippets" inherit_id="website.assets_frontend" name="Website Snippets">
+      <xpath expr="." position="inside">
+        <script type="text/javascript" src="/estate/static/src/js/javascript.js"></script>
+        <link rel="stylesheet" href="/estate/static/src/css/style.css"/>
+      </xpath>
+    </template>
+    
+    <template id="estate_id" name="Custom template">
+      <t t-call="website.layout">
+        <div class="container text-center">
+          <h1><span t-esc="estate.name"/></h1>
+          <h2><span t-esc="estate.expected_price"/></h2>
+        </div>
+      </t>
+    </template>
+
+    <template id="estates" name="Custom template">
+      <t t-call="website.layout">
+        <div class="container text-center">
+          <tbody>
+            <t t-foreach="values" t-as="estate">
+              <t t-esc="estate.name"/>
+              <t t-esc="estate.expected_price"/>
+            </t>
+          </tbody>
+        </div>
+      </t>
+    </template>
+  </data>
+</odoo>
